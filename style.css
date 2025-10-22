@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.drink-menu {
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+ /* Dark Mode  */
+ .dark-mode {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.dark-mode .menu-header {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(161, 161, 161, 0.366);
+  box-shadow: 0 4px 30px rgba(161, 161, 161, 0.366);
+}
+
+.dark-mode .category-section {
+  border-bottom: 1px solid rgba(161, 161, 161, 0.366);
+}
+
+.dark-mode .drink-item {
+  border-bottom: 1px solid rgba(161, 161, 161, 0.265);
+}
+
+
+
+
+
+/* .dark-mode .drink-item:hover {
+  background: rgba(0, 255, 34, 0.05);
+  border-bottom: 1px solid rgb(0, 255, 8);
+  box-shadow: 0 0 20px rgba(0, 255, 21, 0.86);
+} */
+/* 
+.dark-mode .nav-link.active {
+  color: #00b306;
+  border-bottom: 2px solid #B30000;
+} */
+
+
+
+/* Light Mode */
+/* .light-mode {
+  background-color: #fefefe;
+  color: #0b0b0b;
+}
+
+.light-mode .menu-header {
+  background: rgba(254, 254, 254, 0.95);
+  border-bottom: 1px solid rgba(11, 11, 11, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .category-section {
+  border-bottom: 1px solid rgba(11, 11, 11, 0.1);
+}
+
+.light-mode .drink-item {
+  border-bottom: 1px solid rgba(11, 11, 11, 0.05);
+}
+
+.light-mode .drink-item:hover {
+  background: rgba(217, 0, 255, 0.03);
+  border-bottom: 1px solid rgba(217, 0, 255, 0.2);
+}
+
+.light-mode .nav-link.active {
+  color: #d900ff;
+  border-bottom: 2px solid #d900ff;
+}
+
+.light-mode .logo-accent {
+  color: #d900ff;
+}
+
+.light-mode .back-to-top {
+  background: linear-gradient(135deg, #d900ff, #00f0ff);
+  color: #fefefe;
+} */
+
+/* Header */
+.menu-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  width: 200px;
+}
+
+
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: rgba(217, 0, 255, 0.1);
+  transform: rotate(15deg);
+}
+
+/* Main Content */
+.menu-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 0 6rem;
+}
+
+.hero-title {
+  /* font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fefefe, #d900ff, #00f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-flow 5s ease infinite;
+  background-size: 200% 200%; */
+        font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    120deg,
+    #575757 0%,
+    #7d7d7d 40%,
+    #686868 80%,
+    #575757 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerMove 9s linear infinite;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes shimmerMove {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+  
+.hero-subtitle {
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.venue-info {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.venue-info a {
+  color: #4d0000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.venue-info a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+@keyframes gradient-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Category Section */
+.category-section {
+  padding: 3rem 0;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.category-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.expand-button:hover {
+  background: #4d000041;
+  transform: scale(1);
+}
+
+/* Drinks List */
+.drinks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.drink-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+
+.drink-info {
+  flex: 1;
+}
+
+.drink-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.drink-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.drink-details {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.detail {
+  font-size: 0.813rem;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.drink-price {
+  font-size: 1.1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  margin-left: 2rem;
+  color: #4d0000;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e6680eab, #d86a10);
+  border: none;
+  color: #fefefe;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+/* Exclusive Section */
+.exclusive-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(161, 161, 161, 0.265);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.exclusive-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.exclusive-title {
+ font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(
+    120deg,
+    #575757 0%,
+    #7d7d7d 40%,
+    #686868 80%,
+    #575757 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerMove 9s linear infinite;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes shimmerMove {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+
+
+
+/* ============================
+   KÖNIG DES ABENDS – PREMIUM HYBRID DESIGN (ROT x SILBER)
+============================ */
+
+.konig-section {
+  background: linear-gradient(135deg, #2b0000 0%, #4d0000 60%, #730000 100%);
+  border-radius: 18px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.443);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Leichter Glanz-Overlay */
+.konig-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  animation: rotateGlow 14s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* =======================================
+   📱 Mobile-Anpassung – sichtbar & sanfter
+======================================= */
+@media (max-width: 768px) {
+  .konig-section::before {
+    top: -30%;
+    left: 15%;
+    width: 80%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.079) 0%, rgba(255, 255, 255, 0.056) 55%, transparent 75%);
+    animation: rotateGlowMobile 10s linear infinite;
+    opacity: 1;
+  }
+
+  @keyframes rotateGlowMobile {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.05); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+}
+
+/* Badge oben */
+.konig-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #B30000 0%, #7A0000 100%);
+  color: #ffffff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.3);
+}
+
+/* Titel mit sanftem Silber-Schimmer */
+.konig-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(
+    120deg,
+    #f0f0f0 0%,
+    #bcbcbc 40%,
+    #e5e5e5 80%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerMove 6s linear infinite;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes shimmerMove {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.crown-icon {
+  height: 10%;
+  width: 30px;
+}
+
+/* Untertitel */
+.konig-subtitle {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Flascheninfos */
+.konig-info {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.konig-size {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.konig-vol {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  color: #eee;
+}
+
+/* Beschreibung */
+.konig-description {
+  margin-bottom: 0.9rem;
+  line-height: 1.2;
+  color: #ffffffbe;
+  font-weight: 100;
+  position: relative;
+  z-index: 2;
+}
+
+.konig-description p {
+  margin-bottom: 0.4rem;
+}
+
+/* CTA / Preis */
+.konig-order {
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.konig-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fefefe;
+  text-align: right;
+  margin-top: 0.75rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* .konig-section:hover .konig-price {
+  color: #ffcccc;
+  text-shadow: 0 0 35px rgba(255, 100, 100, 0.4);
+} */
+
+
+/* ============================
+   EXCLUSIVE BOTTLES GRID – KOMPAKT AUF HANDY
+============================ */
+
+.exclusive-bottles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exclusive-bottle-card {
+  background: linear-gradient(145deg, #f9f9f9 0%, #eeeeee 50%, #f6f6f6 100%);
+  border: 1px solid rgba(180, 180, 180, 0.4);
+  border-radius: 18px;
+  padding: 1.4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* obere rote Linie */
+.exclusive-bottle-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #660303d6, #6d0202dc, #7b0909);
+  opacity: 0.8;
+}
+
+/* Badge */
+.exclusive-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #B30000 0%, #7A0000 100%);
+  color: #ffffff;
+  padding: 0.4rem 0.875rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0 10px rgba(179, 0, 0, 0.251);
+}
+
+/* Flaschenname mit dunklerem Schimmer */
+.bottle-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(
+    120deg,
+    #6f6f6f 0%,
+    #686868 35%,
+    #8e8e8e 65%,
+    #878787 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerMove 7s linear infinite;
+}
+
+@keyframes shimmerMove {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.bottle-description {
+  font-size: 0.9rem;
+  color: #444444c8;
+  margin-bottom: 0.6rem;
+  opacity: 0.85;
+}
+
+.bottle-details {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.9rem;
+  opacity: 0.75;
+}
+
+.bottle-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #212529;
+  text-align: right;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 15px rgba(179, 0, 0, 0.15);
+}
+
+/* ===========================================
+   📱 Mobile-Version – nur für kleine Geräte
+=========================================== */
+@media (max-width: 768px) {
+  .exclusive-bottles-grid {
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .exclusive-bottle-card {
+    padding: 0.9rem 1rem;
+    border-radius: 18px;
+  }
+
+  .exclusive-badge {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    margin-bottom: 0.7rem;
+  }
+
+  .bottle-name {
+    font-size: 1rem;
+  }
+
+  .bottle-description {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .bottle-details {
+    font-size: 0.7rem;
+    margin-bottom: 0rem;
+  }
+
+  .bottle-price {
+    font-size: 1rem;
+    margin-bottom: -0.4rem;
+  }
+}
+
+
+/* Light mode adjustments for exclusive section */
+.light-mode .konig-title {
+  color: #0b0b0b;
+  text-shadow: 0 0 30px rgba(217, 0, 255, 0.3);
+}
+
+.light-mode .bottle-name {
+  color: #0b0b0b;
+}
+
+.light-mode .exclusive-bottle-card {
+  background: rgba(217, 0, 255, 0.03);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+    .hero-title {
+      font-size: 2.5rem;
+    font-weight: 600;
+}
+
+@keyframes shimmerMove {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+  }
+
+  .hero-subtitle {
+    font-size: 0.91rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .drink-item {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .drink-price {
+    margin-left: 0;
+  }
+
+  .menu-content {
+    padding: 2rem 1rem;
+  }
+
+  .back-to-top {
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .exclusive-title {
+    font-size: 1.75rem;
+  }
+
+  .konig-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .konig-title {
+    font-size: 1.75rem;
+  }
+
+  .konig-subtitle {
+    font-size: 1rem;
+  }
+
+  .konig-price {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .exclusive-bottles-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 2rem 0 4rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .category-section {
+    padding: 2rem 0;
+  }
+
+  .exclusive-header {
+    gap: 1rem;
+  }
+
+  .exclusive-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .exclusive-title {
+    font-size: 1.5rem;
+  }
+
+  .konig-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .konig-title {
+    font-size: 1.5rem;
+  }
+
+  .konig-badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .exclusive-bottle-card {
+    padding: 1.5rem;
+  }
+}
