@@ -256,58 +256,64 @@ drinkCategories.forEach((cat, index) => {
     </div>`;
  categoriesContainer.appendChild(section);
 });
-
 // ==========================
-// Interaktionen
+// Interaktionen (finale Version)
 // ==========================
-let expanded = {};
+let currentlyOpen = null;
 
-// statt nur die Buttons -> ganze Header klickbar machen
+// ganze Header klickbar machen
 document.querySelectorAll('.category-header').forEach(header => {
- header.addEventListener('click', () => {
-  const section = header.closest('.category-section');
-  const list = section.querySelector('.drinks-list');
-  const btn = header.querySelector('.expand-button');
-  const open = list.style.display === 'block';
+  header.addEventListener('click', () => {
+    const section = header.closest('.category-section');
+    const list = section.querySelector('.drinks-list');
+    const btn = header.querySelector('.expand-button');
+    const isOpen = list.style.display === 'block';
 
-  list.style.display = open ? 'none' : 'block';
-  btn.textContent = open ? '▼' : '▲';
- });
+    // aktuelle Scrollposition und Position des Headers merken
+    const scrollYBefore = window.scrollY;
+    const rectBefore = header.getBoundingClientRect().top;
+
+    // anderes offenes Kästlein schliessen
+    if (currentlyOpen && currentlyOpen !== section) {
+      const openList = currentlyOpen.querySelector('.drinks-list');
+      const openBtn = currentlyOpen.querySelector('.expand-button');
+      openList.style.display = 'none';
+      openBtn.textContent = '▼';
+    }
+
+    // aktuelles toggeln
+    list.style.display = isOpen ? 'none' : 'block';
+    btn.textContent = isOpen ? '▼' : '▲';
+    currentlyOpen = isOpen ? null : section;
+
+    // nach dem Öffnen gleiche Header-Position wiederherstellen → kein Springen
+    requestAnimationFrame(() => {
+      const rectAfter = header.getBoundingClientRect().top;
+      const diff = rectAfter - rectBefore;
+      window.scrollBy({ top: diff, behavior: 'instant' });
+    });
+  });
 });
 
+// ==========================
+// Navigation smooth scroll
+// ==========================
 navLinks.addEventListener('click', e => {
- if (e.target.matches('.nav-link')) {
-  document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
-  e.target.classList.add('active');
-  const id = e.target.dataset.section;
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
- }
+  if (e.target.matches('.nav-link')) {
+    document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    const id = e.target.dataset.section;
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
 
+// ==========================
+// Back to Top Button
+// ==========================
 window.addEventListener('scroll', () => {
- backToTopBtn.style.display = window.scrollY > 500 ? 'flex' : 'none';
+  backToTopBtn.style.display = window.scrollY > 500 ? 'flex' : 'none';
 });
 
 backToTopBtn.addEventListener('click', () => {
- window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// themeToggle.addEventListener('click', () => {
-// //  document.body.classList.toggle('dark-mode');
-//  document.body.classList.toggle('light-mode');
-//});
-
-const backToTop = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
- // Zeige Button erst, wenn mehr als 800px gescrollt wurde
- if (window.scrollY > 850) {
-  backToTop.classList.add('visible');
- } else {
-  backToTop.classList.remove('visible');
- }
-});
-
-backToTop.addEventListener('click', () => {
- window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });

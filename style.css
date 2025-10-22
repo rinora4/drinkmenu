@@ -34,60 +34,6 @@
 
 
 
-
-
-/* .dark-mode .drink-item:hover {
-  background: rgba(0, 255, 34, 0.05);
-  border-bottom: 1px solid rgb(0, 255, 8);
-  box-shadow: 0 0 20px rgba(0, 255, 21, 0.86);
-} */
-/* 
-.dark-mode .nav-link.active {
-  color: #00b306;
-  border-bottom: 2px solid #B30000;
-} */
-
-
-
-/* Light Mode */
-/* .light-mode {
-  background-color: #fefefe;
-  color: #0b0b0b;
-}
-
-.light-mode .menu-header {
-  background: rgba(254, 254, 254, 0.95);
-  border-bottom: 1px solid rgba(11, 11, 11, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-}
-
-.light-mode .category-section {
-  border-bottom: 1px solid rgba(11, 11, 11, 0.1);
-}
-
-.light-mode .drink-item {
-  border-bottom: 1px solid rgba(11, 11, 11, 0.05);
-}
-
-.light-mode .drink-item:hover {
-  background: rgba(217, 0, 255, 0.03);
-  border-bottom: 1px solid rgba(217, 0, 255, 0.2);
-}
-
-.light-mode .nav-link.active {
-  color: #d900ff;
-  border-bottom: 2px solid #d900ff;
-}
-
-.light-mode .logo-accent {
-  color: #d900ff;
-}
-
-.light-mode .back-to-top {
-  background: linear-gradient(135deg, #d900ff, #00f0ff);
-  color: #fefefe;
-} */
-
 /* Header */
 .menu-header {
   position: sticky;
@@ -216,7 +162,7 @@
 }
 
 .venue-info a {
-  color: #4d0000;
+  color: #a70000;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
@@ -337,7 +283,7 @@
   font-weight: 400;
   white-space: nowrap;
   margin-left: 2rem;
-  color: #4d0000;
+  color: #a70000;
 }
 
 /* Back to Top Button */
@@ -388,7 +334,6 @@
 
 /* Exclusive Section */
 .exclusive-section {
-  padding: 4rem 0;
   border-bottom: 1px solid rgba(161, 161, 161, 0.265);
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
@@ -440,13 +385,12 @@
 
 
 
-
 /* ============================
    KÖNIG DES ABENDS – PREMIUM HYBRID DESIGN (ROT x SILBER)
 ============================ */
 
 .konig-section {
-  background: linear-gradient(135deg, #2b0000 0%, #4d0000 60%, #730000 100%);
+  background: linear-gradient(135deg, #3a0000 0%, #660000 60%, #8c0000 100%);
   border-radius: 18px;
   padding: 2.5rem;
   margin-bottom: 2.5rem;
@@ -650,14 +594,14 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #660303d6, #6d0202dc, #7b0909);
+  background: linear-gradient(90deg, #a70000c8, #a70000, #a70000c8);
   opacity: 0.8;
 }
 
 /* Badge */
 .exclusive-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #B30000 0%, #7A0000 100%);
+  background: linear-gradient(135deg, #e10000 0%, #a70000 100%);
   color: #ffffff;
   padding: 0.4rem 0.875rem;
   border-radius: 8px;
