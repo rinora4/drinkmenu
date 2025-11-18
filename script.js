@@ -42,7 +42,7 @@ const drinkCategories = [
   drinks: [
    { name: 'Corona', volume: '33cl', alcohol: '4.7%', price: 10.0 },
    { name: 'Heineken', volume: '25cl', alcohol: '5.0%', price: 8.0 },
-   { name: 'Birra Peja Crudo', volume: '33cl', alcohol: '5.0%', price: 10.0 },
+   //  { name: 'Birra Peja Crudo', volume: '33cl', alcohol: '5.0%', price: 10.0 },
   ],
  },
  {
@@ -60,13 +60,14 @@ const drinkCategories = [
    { name: 'Gespritzter Weisswein', subtitle: '(süss/sauer)', volume: '20cl', price: 10.0 },
    { name: 'Aperol Spritz', subtitle: '(Aperol, Prosecco, Mineral, Orangenschnitz)', volume: '20cl', price: 15.0 },
    { name: 'Hugo', subtitle: '(Prosecco, Holunderblüten-Sirup, Limetten, Mineral)', volume: '20cl', price: 15.0 },
+   { name: 'Martini Bianco Spritz', subtitle: '(Martini Bianco, Prosecco, Soda, lemon juice)', volume: '20cl', price: 15.0 },
   ],
  },
- {
-  id: 'mix',
-  name: 'MIX',
-  drinks: [{ name: 'Trojka Ice', volume: '27.5cl', alcohol: '4.0%', price: 10.0 }],
- },
+ //  {
+ //   id: 'mix',
+ //   name: 'MIX',
+ //   drinks: [{ name: 'Trojka Ice', volume: '27.5cl', alcohol: '4.0%', price: 10.0 }],
+ //  },
  {
   id: 'aperitif',
   name: 'APERITIF',
@@ -81,8 +82,10 @@ const drinkCategories = [
   drinks: [
    { name: 'Whisky - Cola (Johnnie Walker)', volume: '4cl', alcohol: '40%', price: 18.0 },
    { name: "Whisky - Cola (Jack Daniel's)", volume: '4cl', alcohol: '40%', price: 20.0 },
-   { name: 'Vodka, Cranberry/Orange/Lemon (Grey Goose)', volume: '4cl', alcohol: '40%', price: 20.0 },
-   { name: 'Vodka, Cranberry/Orange/Lemon (Trojka)', volume: '4cl', alcohol: '40%', price: 18.0 },
+   //  { name: 'Vodka, Cranberry/Orange/Lemon (Grey Goose)', volume: '4cl', alcohol: '40%', price: 20.0 },
+   //  { name: 'Vodka, Cranberry/Orange/Lemon (Trojka)', volume: '4cl', alcohol: '40%', price: 18.0 },
+   { name: 'Vodka (Trojka)', subtitle: '(Cranberry/Orange/Lemon)', volume: '4cl', alcohol: '40%', price: 18.0 },
+   { name: 'Vodka (Grey Goose)', subtitle: '(Cranberry/Orange/Lemon)', volume: '4cl', alcohol: '40%', price: 20.0 },
    { name: 'Gin Tonic (Bombay)', volume: '4cl', alcohol: '40%', price: 18.0 },
    { name: "Gin Tonic (Hendrick's)", volume: '4cl', alcohol: '40%', price: 20.0 },
    { name: 'Bacardi - Cola (Superior/Black)', volume: '4cl', alcohol: '37.5%', price: 18.0 },
@@ -98,8 +101,8 @@ const drinkCategories = [
    { name: 'Trojka Pink', volume: '2cl', price: 5.0 },
    { name: 'Passoã', volume: '2cl', price: 5.0 },
    { name: 'Berliner Luft', volume: '2cl', price: 5.0 },
-   { name: "Dash'n me Brna - Herbes and spices Liqueur", volume: '2cl', price: 5.0 },
-   { name: 'Zanë - Hazelnut Liqueur with Violets', volume: '2cl', price: 5.0 },
+   { name: 'Dashni me Brina - Herbes and spices Liqueur', volume: '2cl', price: 5.0 },
+   { name: 'Zanë - Hazelnut Liqueur with Violents', volume: '2cl', price: 5.0 },
    { name: 'Tequila', volume: '2cl', price: 10.0 },
   ],
  },
@@ -110,7 +113,7 @@ const drinkCategories = [
    { name: 'Classic Mojito', subtitle: '(Tials Classic Mojito, Soda, Limetten, Minze, Crash-Ice)', price: 18.0 },
    { name: 'Berry Mojito', subtitle: '(Tials Berry Mojito, Soda, Limetten, Minze, Crash-Ice)', price: 18.0 },
    { name: 'Sex on the Beach', subtitle: '(Vodka Trojka pure, White Peach, Cranberrysaft)', price: 18.0 },
-   { name: 'Caipirossa', subtitle: '(Vodka Trojka red, Limetten, Crash-Ice)', price: 18.0 },
+   { name: 'Caipirosso', subtitle: '(Vodka Trojka red, Limetten, Crash-Ice)', price: 18.0 },
    { name: 'Caipirinha', subtitle: '(Cachaça, Limetten, Crash-Ice)', price: 18.0 },
   ],
  },
@@ -137,8 +140,8 @@ const drinkCategories = [
   id: 'prosecco',
   name: 'PROSECCO',
   drinks: [
-   { name: 'Bailly (Prosecco Freixenet)', volume: '10cl', alcohol: '11.0%', price: 10.0 },
-   { name: 'Cupitt (Prosecco Freixenet Rosé)', volume: '10cl', alcohol: '11.0%', price: 10.0 },
+   { name: 'Cüpli (Prosecco Freixenet)', volume: '10cl', alcohol: '11.0%', price: 10.0 },
+   { name: 'Cüpli (Prosecco Freixenet Rosé)', volume: '10cl', alcohol: '11.0%', price: 10.0 },
    { name: 'Prosecco Freixenet', volume: '75cl', alcohol: '11.0%', price: 65.0 },
    { name: 'Prosecco Freixenet Rosé', volume: '75cl', alcohol: '11.0%', price: 65.0 },
   ],
@@ -162,6 +165,7 @@ const drinkCategories = [
   drinks: [
    { name: 'Trojka (white/red/black/pink)', volume: '0.70L', alcohol: '40.0%', price: 180.0 },
    { name: 'Grey Goose', volume: '0.70L', alcohol: '40.0%', price: 220.0 },
+   { name: 'Grey Goose Altius', volume: '0.70L', alcohol: '40.0%', price: 250.0 },
    { name: 'Grey Goose MAGNUM', volume: '1.75L', alcohol: '40.0%', price: 440.0 },
    { name: 'Grey Goose PREMIUM', volume: '4.50L', alcohol: '40.0%', price: 1080.0 },
    { name: 'Belvedere', volume: '0.70L', alcohol: '40.0%', price: 230.0 },
@@ -176,7 +180,7 @@ const drinkCategories = [
    { name: "Ballantine's", volume: '0.70L', alcohol: '40.0%', price: 180.0 },
    { name: 'Johnnie Walker', volume: '0.70L', alcohol: '40.0%', price: 180.0 },
    { name: "Jack Daniel's", volume: '0.70L', alcohol: '40.0%', price: 200.0 },
-   { name: 'Chivas Regal 12 Years', volume: '0.70L', alcohol: '40.0%', price: 230.0 },
+   { name: 'Chivas Regal (12 Years)', volume: '0.70L', alcohol: '40.0%', price: 230.0 },
   ],
  },
  {
@@ -206,7 +210,10 @@ const drinkCategories = [
  {
   id: 'zusaetze',
   name: 'ZUSÄTZE (1 LITER)',
-  drinks: [{ name: 'Mineral / Cranberry / Orangensaft / Apfelsaft / Ananassaft / Bitterlemon / Tonic / Wildberry', price: 20.0 }],
+  drinks: [
+   { name: 'Mineral / Cranberry / Orangensaft / Apfelsaft', price: 20.0 },
+   { name: 'Ananassaft / Bitterlemon / Tonic / Wildberry', price: 20.0 },
+  ],
  },
 ];
 
@@ -215,7 +222,6 @@ const drinkCategories = [
 // ==========================
 const navLinks = document.getElementById('navLinks');
 const categoriesContainer = document.getElementById('categoriesContainer');
-const backToTopBtn = document.getElementById('backToTop');
 const themeToggle = document.getElementById('themeToggle');
 
 // Navigation erstellen
@@ -310,10 +316,21 @@ navLinks.addEventListener('click', e => {
 // ==========================
 // Back to Top Button
 // ==========================
-window.addEventListener('scroll', () => {
-  backToTopBtn.style.display = window.scrollY > 500 ? 'flex' : 'none';
-});
+// Back to Top Button
+// const backToTopBtn = document.getElementById('backToTop');
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+// window.addEventListener('scroll', () => {
+//  if (window.scrollY > 220) {
+//   backToTopBtn.classList.add('show');
+//   backToTopBtn.classList.remove('hide');
+//  } else {
+//   backToTopBtn.classList.add('hide');
+//   setTimeout(() => backToTopBtn.classList.remove('show'), 350);
+//  }
+// });
+
+// backToTopBtn.addEventListener('click', () => {
+//  window.scrollTo({ top: 0, behavior: 'smooth' });
+// });
+
+
