@@ -6,16 +6,36 @@
   box-sizing: border-box;
 }
 
+main.menu-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
 /* ===== BASIC ===== */
 .menu-cover {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  background: #ffffff;
+  width: 100vw; /* volle Bildschirmbreite */
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    135deg,
+    #f8f8f8 0%,
+    #e2e2e2 30%,
+    #cfcfcf 50%,
+    #e4e4e4 70%,
+    #fafafa 100%
+  );
   text-align: center;
   position: relative;
   font-family: 'Poppins', sans-serif;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
 }
+
+
+
+
 
 /* ===== TITLE ===== */
 .mc-title {
@@ -25,6 +45,8 @@
   font-family: Impact, sans-serif;
   letter-spacing: 2px;
   margin-bottom: 5px;
+  text-align: center;
+
 }
 
 .mc-drink {
@@ -87,9 +109,10 @@
 /* ===== RED BAR ===== */
 .mc-redbar {
   /* background: #c8372b; */
+    text-align: center;
   color: #fff;
   padding: 20px 10px;
-  margin-top: 40px;
+
   margin-bottom: 40px;
   font-size: clamp(14px, 3vw, 18px);
   line-height: 1.3;
@@ -221,7 +244,7 @@
   background-clip: text;
   animation: gradient-flow 5s ease infinite;
   background-size: 200% 200%; */
-        font-size: 4rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(
