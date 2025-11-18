@@ -28,7 +28,7 @@ main.menu-content {
   text-align: center;
   position: relative;
   font-family: 'Poppins', sans-serif;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
   padding-top: 30px;
 
 }
@@ -39,7 +39,7 @@ main.menu-content {
 
 /* ===== TITLE ===== */
 .mc-title {
-  font-size: clamp(50px, 10vw, 80px);
+  font-size: clamp(60px, 10vw, 80px);
   font-weight: 950;
   color: #c8372b;
   font-family: Impact, sans-serif;
@@ -50,10 +50,10 @@ main.menu-content {
 }
 
 .mc-drink {
-  width: clamp(410px, 60vw, 470px);
-  transform: translateX(-23px);
+  width: clamp(430px, 65vw, 520px);
+  transform: translateX(-27px);
   margin: 0 auto;
-  margin-top: -120px;
+  margin-top: -140px;
   display: block;
   color: #c8372b; /* SVG wird rot */
 }
@@ -76,35 +76,54 @@ main.menu-content {
 /* left top */
 .t1 {
   left: 10%;
-  top: 18%;
+  top: 30%;
 }
 
 /* left bottom */
 .t2 {
   left: 10%;
-  top: 45%;
+  top: 61%;
   line-height: 1.1;
 }
 
 /* right top */
 .t3 {
   right: 5%;
-  top: 29%;
+  top: 38%;
 }
 
 /* right bottom */
 .t4 {
-  right: 10%;
-  top: 43%;
+  right: 18%;
+  top: 57%;
 }
 
 /* ===== GETRAENKEKARTE ===== */
 .mc-getraenke {
-  font-size: clamp(26px, 5vw, 38px);
+  font-size: clamp(30px, 5vw, 38px);
   color: #c8372b;
   font-family: Impact, sans-serif;
-  margin-top: -150px; /* kleiner Abstand, statt 20-40px */
+  margin-top: -190px;
 }
+
+.mc-getraenke .underline-part {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px; /* kleiner Abstand zur Linie */
+}
+
+/* Die halbe Linie */
+.mc-getraenke .underline-part::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 105%;        /* HIER: halber Unterstrich */
+  height: 3px;       /* Dicke der Linie */
+  background: #c8372b;
+  
+}
+
 
 /* ===== RED BAR ===== */
 .mc-redbar {
