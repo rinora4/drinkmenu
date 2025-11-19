@@ -41,7 +41,7 @@ main.menu-content {
 .mc-title {
   font-size: clamp(60px, 10vw, 80px);
   font-weight: 950;
-  color: #c8372b;
+  color: #ac0104;
   font-family: Impact, sans-serif;
   letter-spacing: 2px;
   margin-bottom: 5px;
@@ -55,7 +55,7 @@ main.menu-content {
   margin: 0 auto;
   margin-top: -140px;
   display: block;
-  color: #c8372b; /* SVG wird rot */
+  color: #ac0104; /* SVG wird rot */
 }
 
 .mc-drink svg {
@@ -101,7 +101,7 @@ main.menu-content {
 /* ===== GETRAENKEKARTE ===== */
 .mc-getraenke {
   font-size: clamp(30px, 5vw, 38px);
-  color: #c8372b;
+  color: #ac0104;
   font-family: Impact, sans-serif;
   margin-top: -190px;
 }
@@ -120,7 +120,7 @@ main.menu-content {
   bottom: 0;
   width: 105%;        /* HIER: halber Unterstrich */
   height: 3px;       /* Dicke der Linie */
-  background: #c8372b;
+  background: #ac0104;
   
 }
 
@@ -151,6 +151,150 @@ main.menu-content {
 .mc-redbar a{
   color: #fff;
 }
+
+/* -----------------------------------------
+   📱 iPhone 15 Pro Max (Basis)
+   → Keine Änderungen, das ist deine Referenz
+------------------------------------------ */
+
+
+/* -----------------------------------------
+   📱 iPhone 14 / 13 / 12 / Samsung S22 etc.
+   (leicht kleinere Displays)
+------------------------------------------ */
+@media (max-width: 430px) {
+
+  .mc-title {
+    font-size: 48px;
+  }
+
+  .mc-drink {
+    width: 80vw;
+    margin-top: -120px;
+    transform: translateX(-20px);
+  }
+
+  .t1 { top: 27%; left: 8%; }
+  .t2 { top: 56%; left: 8%; }
+  .t3 { top: 35%; right: 6%; }
+  .t4 { top: 53%; right: 12%; }
+
+  .mc-getraenke {
+    margin-top: -160px;
+    font-size: 28px;
+  }
+
+  .mc-getraenke .underline-part::after {
+    width: 100%;
+    height: 2px;
+  }
+}
+
+
+/* -----------------------------------------
+   📱 iPhone SE / Kleine Android Phones
+------------------------------------------ */
+@media (max-width: 380px) {
+
+  .mc-title {
+    font-size: 42px;
+  }
+
+  .mc-drink {
+    width: 85vw;
+    margin-top: -110px;
+    transform: translateX(-12px);
+  }
+
+  .t1 { top: 29%; left: 6%; }
+  .t2 { top: 59%; left: 6%; }
+  .t3 { top: 36%; right: 6%; }
+  .t4 { top: 56%; right: 10%; }
+
+  .mc-getraenke {
+    margin-top: -140px;
+    font-size: 26px;
+  }
+
+  .mc-getraenke .underline-part::after {
+    width: 95%;
+  }
+}
+
+
+/* -----------------------------------------
+   📱 Ultra Small Phones (iPhone Mini)
+------------------------------------------ */
+@media (max-width: 330px) {
+
+  .mc-title {
+    font-size: 38px;
+  }
+
+  .mc-drink {
+    width: 90vw;
+    margin-top: -90px;
+    transform: translateX(-10px);
+  }
+
+  .t1 { top: 30%; left: 5%; }
+  .t2 { top: 61%; left: 5%; }
+  .t3 { top: 39%; right: 5%; }
+  .t4 { top: 58%; right: 10%; }
+
+  .mc-getraenke {
+    margin-top: -120px;
+    font-size: 24px;
+  }
+
+  .mc-getraenke .underline-part::after {
+    width: 90%;
+    height: 2px;
+  }
+}
+
+/* -----------------------------------------
+   💻 Desktop / Laptop Optimierung
+------------------------------------------ */
+@media (min-width: 1024px) {
+
+  .t1 {
+    left: 28%;    /* statt 5% → näher zur Mitte */
+    top: 32%;
+  }
+
+  .t2 {
+    left: 28%;
+    top: 60%;
+  }
+
+  .t3 { 
+    right: 22%;   /* statt 5% → näher zur Mitte */
+    top: 40%;
+  }
+
+  .t4 {
+    right: 28%;   /* statt 10% → kompakter */
+    top: 58%;
+  }
+
+  .mc-drink {
+    transform: translateX(0); /* auf Desktop nicht verschieben */
+    width: 450px;             /* sauberer Look */
+    margin-top: -120px;
+  }
+
+  .mc-title {
+    font-size: 70px;          /* perfekt für Desktop */
+  }
+
+  .mc-getraenke {
+    margin-top: -160px;
+  }
+}
+
+
+
 
 .drink-menu {
   min-height: 100vh;
