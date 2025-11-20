@@ -70,7 +70,7 @@ main.menu-content {
   font-size: clamp(18px, 4vw, 30px);
   font-weight: 800;
   font-family: 'Marker Felt', 'Comic Neue', sans-serif;
-  color: #000;
+  color: #212529;
 }
 
 /* left top */
@@ -447,7 +447,7 @@ main.menu-content {
 }
 
 .venue-info a {
-  color: red;
+  color: #ac0104;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
@@ -512,7 +512,7 @@ main.menu-content {
 }
 
 .expand-button:hover {
-  background: #4d000041;
+  background: #4d0000a2;
   transform: scale(1);
 }
 
@@ -567,7 +567,7 @@ main.menu-content {
   font-weight: 400;
   white-space: nowrap;
   margin-left: 2rem;
-  color: #a70000;
+  color: #ac0104;
 }
 
 .back-to-top {
@@ -625,14 +625,14 @@ main.menu-content {
 }
 
 .exclusive-title {
- font-size: 4rem;
+  font-size: 4rem;
   font-weight: 700;
   background: linear-gradient(
     120deg,
-    #575757 0%,
-    #7d7d7d 40%,
-    #686868 80%,
-    #575757 100%
+    #212529 0%,
+    #2a2f34 40%,
+    #7e7e7e 80%,
+    #212529 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -641,6 +641,7 @@ main.menu-content {
   z-index: 2;
   position: relative;
 }
+
 
 @keyframes shimmerMove {
   0% { background-position: -200% center; }
@@ -850,6 +851,49 @@ main.menu-content {
 }
 
 .exclusive-bottle-card {
+  background: linear-gradient(
+    135deg,
+    #e6e6e6 0%,
+    #bfbfbf 50%,
+    #f2f2f2 100%
+  );
+  border-radius: 18px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* bewegter metallischer Shine */
+.exclusive-bottle-card::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.10) 40%,
+    transparent 80%
+  );
+  animation: rotateGlow 12s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+/* .exclusive-bottle-card {
   background: linear-gradient(145deg, #f9f9f9 0%, #eeeeee 50%, #f6f6f6 100%);
   border: 1px solid rgba(180, 180, 180, 0.4);
   border-radius: 18px;
@@ -857,10 +901,10 @@ main.menu-content {
   position: relative;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
+} */
 
 /* obere rote Linie */
-.exclusive-bottle-card::before {
+/* .exclusive-bottle-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -869,7 +913,7 @@ main.menu-content {
   height: 2px;
   background: linear-gradient(90deg, #a70000c8, #a70000, #a70000c8);
   opacity: 0.8;
-}
+} */
 
 /* Badge */
 .exclusive-badge {
@@ -892,16 +936,17 @@ main.menu-content {
   margin-bottom: 0.5rem;
   background: linear-gradient(
     120deg,
-    #6f6f6f 0%,
-    #686868 35%,
-    #8e8e8e 65%,
-    #878787 100%
+    #212529 0%,
+    #2b3035 35%,
+    #181b1e 65%,
+    #1f2326 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmerMove 7s linear infinite;
 }
+
 
 @keyframes shimmerMove {
   0% { background-position: -200% center; }
@@ -928,7 +973,8 @@ main.menu-content {
   color: #212529;
   text-align: right;
   letter-spacing: 0.03em;
-  text-shadow: 0 0 15px rgba(179, 0, 0, 0.15);
+
+  transform: translate(-10px, -8px); /* LINKS / OBEN */
 }
 
 /* ===========================================
@@ -936,12 +982,12 @@ main.menu-content {
 =========================================== */
 @media (max-width: 768px) {
   .exclusive-bottles-grid {
-    gap: 1rem;
-    max-width: 100%;
+    gap: 0.1rem;
+    max-width: 90%;
   }
 
   .exclusive-bottle-card {
-    padding: 0.9rem 1rem;
+    padding: 0.1rem 1rem;
     border-radius: 18px;
   }
 
@@ -1051,7 +1097,7 @@ main.menu-content {
   width: 3rem;
   height: 3rem;
 
-  background: #c8372b;
+  background: #ac0104;
   color: white;
   border: none;
   border-radius: 50%;
@@ -1157,13 +1203,13 @@ main.menu-content {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #a70000;
+  background-color: #ac0104;
   transition: width 0.3s ease;
 }
 
 /* Hover-Effekt (Desktop) */
 .category-section.fade-in .category-title:hover {
-  color: #a70000;
+  color: #ac0104;
   transform: translateX(5px);
 }
 
@@ -1224,13 +1270,13 @@ main.menu-content {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #a70000;
+  background-color: #ac0104;
   transition: width 0.3s ease;
 }
 
 /* === HOVER ÜBER DEN GESAMTEN BEREICH === */
 .category-section.fade-in .category-header:hover .category-title {
-  color: #a70000;
+  color: #ac0104;
   transform: translateX(5px);
 }
 
@@ -1241,12 +1287,19 @@ main.menu-content {
 /* === OPTIONAL: kleine Bewegung vom Pfeil === */
 .category-section.fade-in .category-header:hover .arrow {
   transform: translateY(2px);
-  color: #a70000;
+  color: #ac0104;
   transition: all 0.3s ease;
 }
 
 .footer {
-  background: #f7f7f7;     /* sehr helles grau, wirkt edel */
+    background: linear-gradient(
+    135deg,
+    #f8f8f8 0%,
+    #e2e2e2 30%,
+    #cfcfcf 50%,
+    #e4e4e4 70%,
+    #fafafa 100%
+  );    /* sehr helles grau, wirkt edel */
   padding: 25px 10px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -1261,7 +1314,7 @@ main.menu-content {
 }
 
 .footer-content a {
-  color: #c8372b;          /* Rinora Rot */
+  color: #ac0104;          /* Rinora Rot */
   text-decoration: none;
   font-weight: 500;
 }
