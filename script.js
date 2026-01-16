@@ -165,7 +165,7 @@ const drinkCategories = [
   drinks: [
    { name: 'Trojka (white/red/black/pink)', volume: '0.70L', alcohol: '40.0%', price: 180.0 },
    { name: 'Grey Goose', volume: '0.70L', alcohol: '40.0%', price: 220.0 },
-   { name: 'Grey Goose Altius', volume: '0.70L', alcohol: '40.0%', price: 250.0 },
+   { name: 'Grey Goose Altius', volume: '0.70L', alcohol: '40.0%', price: 330.0 },
    { name: 'Grey Goose MAGNUM', volume: '1.75L', alcohol: '40.0%', price: 440.0 },
    { name: 'Grey Goose PREMIUM', volume: '4.50L', alcohol: '40.0%', price: 1080.0 },
    { name: 'Belvedere', volume: '0.70L', alcohol: '40.0%', price: 230.0 },
